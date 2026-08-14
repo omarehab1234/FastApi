@@ -1,0 +1,9 @@
+fastapi[standard]==0.141.1
+uvicorn==0.52.1
+SQLAlchemy==2.0.43
+PyMySQL==1.2.0
+pydantic==2.12.5
+argon2-cffi==25.1.0
+passlib[argon2]
+python-dotenv
+PyJWT
