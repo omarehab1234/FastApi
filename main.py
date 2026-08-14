@@ -1,12 +1,8 @@
-from fastapi import FastAPI, HTTPException
-import os
 import sys
+sys.path.insert(0, "/app")
+from fastapi import FastAPI, HTTPException
 
-print("CURRENT DIRECTORY:", os.getcwd())
-print("MAIN FILE:", __file__)
-print("PYTHON PATH:")
-for path in sys.path:
-    print(path)
+
 from auth.validateRegister import validate_register_data
 from models.UserRegister import UserRegister
 from db.database import get_db
