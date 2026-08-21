@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, "/app")
+# sys.path.insert(0, "/app")
 from fastapi import FastAPI, HTTPException
 
 
@@ -68,7 +68,10 @@ def userLogin(user:UserLog,db:Session = Depends(get_db)):
     }
 
 
-
+@app.get("/auth/users")
+def get_users(db: Session = Depends(get_db)):
+    users = db.query(User).all()
+    return {"users": users}
 
 
 
